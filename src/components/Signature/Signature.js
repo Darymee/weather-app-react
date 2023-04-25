@@ -6,7 +6,7 @@ export default function Signature() {
   return (
     <p>
       <a
-        href="https://github.com/Darymee/weather-app"
+        href="https://github.com/Darymee/weather-app-react"
         target="_blank"
         rel="noreferrer"
         className="github-link"
