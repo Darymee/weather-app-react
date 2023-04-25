@@ -3,7 +3,7 @@ import ForecastItem from "../ForecastItem/ForecastItem";
 
 export default function Forecast() {
   return (
-    <ul className="list-group list-group-horizontal row" id="forecast-list">
+    <ul className="list-group list-group-horizontal row">
       <ForecastItem temperature={20} day="Saturday" icon="⛅️" />
       <ForecastItem temperature={30} day="Sunday" icon="☀️" />
       <ForecastItem temperature={15} day="Monday" icon="🌦️️" />

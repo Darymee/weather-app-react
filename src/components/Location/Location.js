@@ -5,8 +5,8 @@ export default function Location({ city, country }) {
   return (
     <div className="col-6">
       <h2 className="location">
-        <span id="city">{city || "London"},</span>
-        <span id="country">{country || "EN"}</span>
+        <span>{city},</span>
+        <span>{country}</span>
         <i className="fa-sharp fa-solid fa-location-pin"></i>
       </h2>
     </div>

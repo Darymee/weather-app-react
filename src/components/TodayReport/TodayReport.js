@@ -7,21 +7,17 @@ export default function TodayReport({ description, temperature }) {
     <div className="col">
       <h1 className="mb-2 today-text text-center">Today's Report</h1>
       <div className="wrapper">
-        <p className="mb-2 weather description" id="description">
-          {description || "It's rainy"}
-        </p>
+        <p className="mb-2 weather description">{description}</p>
         <div className="row">
           <div className="col">
-            <p className="temperature" id="temperature">
-              {Math.round(temperature) || 25}
-            </p>
+            <p className="temperature">{Math.round(temperature)}</p>
           </div>
           <div className="col button-wrapper">
-            <button type="button" className="type" id="celsius">
+            <button type="button" className="type">
               °C
             </button>
             <span className="separator">|</span>
-            <button type="button" className="type" id="fahrenheit">
+            <button type="button" className="type">
               °F
             </button>
           </div>
