@@ -2,11 +2,16 @@ import React from "react";
 
 import "./TodayInfo.css";
 
-export default function TodayInfo() {
+export default function TodayInfo({ humidity, wind, pressure, icon_id }) {
+  let url = `https://openweathermap.org/img/wn/${icon_id}@2x.png`;
   return (
     <div className="col">
       <img
-        src="https://cdn-icons-png.flaticon.com/512/116/116251.png"
+        src={
+          icon_id
+            ? url
+            : "https://cdn-icons-png.flaticon.com/512/116/116251.png"
+        }
         alt="weather icon"
         id="icon"
         className="big-icon mb-4"
@@ -18,7 +23,7 @@ export default function TodayInfo() {
             Humidity:
             <br />
             <span className="info-value" id="humidity">
-              48%
+              {humidity || 48}%
             </span>
           </p>
         </div>
@@ -27,7 +32,7 @@ export default function TodayInfo() {
             Wind speed:
             <br />
             <span className="info-value" id="wind-speed">
-              6 km/h
+              {Math.round(wind) || 6} km/h
             </span>
           </p>
         </div>
@@ -36,7 +41,7 @@ export default function TodayInfo() {
             Pressure:
             <br />
             <span className="info-value" id="pressure">
-              1000 Gpa
+              {pressure || 1000} Gpa
             </span>
           </p>
         </div>

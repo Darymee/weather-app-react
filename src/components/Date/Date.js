@@ -1,7 +1,7 @@
 import React from "react";
 import "./Date.css";
 
-export default function Date() {
+export default function Date({ date }) {
   return (
     <div className="col-6">
       <h2 className="date">

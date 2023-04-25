@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./SearchForm.css";
 
-export default function SearchForm() {
+export default function SearchForm({ getCity }) {
+  const [city, setCity] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!city) return;
+    getCity(city);
+    setCity("");
+  }
+
+  function handleChange(e) {
+    let value = e.target.value.toLowerCase().trim();
+    setCity(value);
+  }
+
   return (
-    <form className="mb-4" id="search-form">
+    <form className="mb-4" id="search-form" onSubmit={handleSubmit}>
       <div className="row">
         <div className="col">
           <input
@@ -13,6 +28,8 @@ export default function SearchForm() {
             placeholder="Enter your city"
             id="text-input"
             autoComplete="off"
+            onChange={handleChange}
+            value={city}
           />
         </div>
         <div className="col">
@@ -22,6 +39,7 @@ export default function SearchForm() {
             value="Search"
           />
         </div>
+
         <div className="col">
           <button
             type="button"
