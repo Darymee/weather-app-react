@@ -6,6 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Prompt", sans-serif;
+
+  background: url("../public/weather.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
@@ -15,12 +19,12 @@ code {
 
 .styled-card {
   margin: 0 auto;
-  background: rgba(241, 211, 179, 0.28);
+  background-color: rgba(165, 215, 232, 0.35);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.9px);
-  -webkit-backdrop-filter: blur(5.9px);
-  border: 1px solid rgba(241, 211, 179, 0.3);
-  color: #8b7e74;
+  backdrop-filter: blur(7.9px);
+  -webkit-backdrop-filter: blur(7.9px);
+  border: 1px solid rgba(25, 55, 188, 0.3);
+  color: #19376d;
   width: fit-content;
 }

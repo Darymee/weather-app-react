@@ -1,7 +1,7 @@
 import React from "react";
-import "./Date.css";
+import "./UpdateDate.css";
 
-export default function Date({ date }) {
+export default function UpdateDate({ date }) {
   function formatDate() {
     let days = [
       "Sunday",
@@ -27,14 +27,16 @@ export default function Date({ date }) {
     return { day, hours, minutes };
   }
 
+  let currentDate = formatDate();
+
   return (
     <div className="col-6">
       {date && (
         <h2 className="date">
           Last updated:
-          <span> {formatDate().day}</span>
+          <span> {currentDate.day} </span>
           <span className="time">
-            {formatDate().hours}:{formatDate().minutes}
+            {currentDate.hours}:{currentDate.minutes}
           </span>
         </h2>
       )}

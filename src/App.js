@@ -7,26 +7,25 @@ import "./index.css";
 
 import SearchForm from "./components/SearchForm/SearchForm";
 import Location from "./components/Location/Location";
-import Date from "./components/Date/Date";
+import UpdateDate from "./components/UpdateDate/UpdateDate";
 import TodayReport from "./components/TodayReport/TodayReport";
 import TodayInfo from "./components/TodayInfo/TodayInfo";
 import Forecast from "./components/Forecast/Forecast";
 import Signature from "./components/Signature/Signature";
 import { useState } from "react";
 
-export default function App({ defaultCity = "Kharkiv" }) {
+export default function App() {
   const [weather, setWeather] = useState({ isLoading: true });
-  const [city, setCity] = useState(defaultCity);
+  const [city, setCity] = useState("Kharkiv");
 
   function handleResponse(response) {
-    // console.log(response.data.time);
     setWeather({
       isLoading: false,
       // coordinates: response.data.coord,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       pressure: response.data.temperature.pressure,
-      // date: new Date(response.data.time),
+      date: new Date(response.data.time),
       description: response.data.condition.description,
       icon_url: response.data.condition.icon_url,
       wind: response.data.wind.speed,
@@ -36,7 +35,6 @@ export default function App({ defaultCity = "Kharkiv" }) {
   }
 
   function getCity() {
-    console.log(city);
     const APIkey = "ft62c1a34b0c40fe3oc6a889fc79e401";
     let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${APIkey}&units=metric`;
     axios.get(url).then(handleResponse);
@@ -48,7 +46,7 @@ export default function App({ defaultCity = "Kharkiv" }) {
       <TailSpin
         height="80"
         width="80"
-        color="#8b7e74"
+        color="#19376D"
         ariaLabel="tail-spin-loading"
         radius="1"
         wrapperStyle={{}}
@@ -57,15 +55,14 @@ export default function App({ defaultCity = "Kharkiv" }) {
       />
     );
   } else {
-    console.log(weather);
     return (
-      <div className="container mt-5">
+      <div className="container mt-5 pt-5">
         <div className="card shadow p-1 mb-5 rounded styled-card">
           <div className="card-body p-5">
-            <SearchForm getCity={setCity} />
+            <SearchForm getCity={setCity} resetData={setWeather} />
             <div className="row mb-5">
               <Location city={weather.city} country={weather.country} />
-              {/* <Date date={weather.date} /> */}
+              <UpdateDate date={weather.date} />
             </div>
             <div className="row">
               <TodayReport

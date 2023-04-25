@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./SearchForm.css";
 
-export default function SearchForm({ getCity }) {
+export default function SearchForm({ getCity, resetData }) {
   const [city, setCity] = useState("");
 
   function handleSubmit(e) {
@@ -10,6 +10,7 @@ export default function SearchForm({ getCity }) {
 
     if (!city) return;
     getCity(city);
+    resetData({ isLoading: true });
     setCity("");
   }
 
