@@ -1,0 +1,15 @@
+.big-icon {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.info {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.info-value {
+  color: #146c94;
+  text-shadow: 0 0 0.25rem rgba(101, 100, 124, 0.7);
+}

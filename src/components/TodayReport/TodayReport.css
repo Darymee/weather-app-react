@@ -1,0 +1,60 @@
+.weather {
+  color: #c7bca1;
+  font-size: 1.3rem;
+  width: fit-content;
+  margin: 0 auto;
+  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.temperature {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #65647c;
+  width: fit-content;
+  margin: 0 0 0 auto;
+  text-shadow: 0 0 0.25rem rgba(101, 100, 124, 0.7);
+}
+
+.description::first-letter {
+  text-transform: capitalize;
+}
+
+.button-wrapper {
+  width: fit-content;
+  margin: auto;
+  padding: 0;
+}
+
+.type {
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  color: #65647c;
+  text-shadow: 0 0 0.25rem rgba(101, 100, 124, 0.7);
+  transition: all 300ms ease-in-out;
+}
+
+.type:hover {
+  color: #146c94;
+}
+
+.separator {
+  color: #65647c;
+  font-size: 2rem;
+  text-shadow: 0 0 0.25rem rgba(101, 100, 124, 0.7);
+}
+
+button.checked {
+  cursor: default;
+  color: #c7bca1;
+  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+button.checked:hover {
+  cursor: default;
+  color: #c7bca1;
+  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+}
