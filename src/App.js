@@ -21,7 +21,7 @@ export default function App() {
   function handleResponse(response) {
     setWeather({
       isLoading: false,
-      // coordinates: response.data.coord,
+      coordinates: response.data.coordinates,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       pressure: response.data.temperature.pressure,
@@ -77,7 +77,7 @@ export default function App() {
                 alt={weather.description}
               />
             </div>
-            <Forecast />
+            <Forecast coordinates={weather.coordinates} />
           </div>
           <Signature />
         </div>

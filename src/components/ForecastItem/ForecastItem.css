@@ -5,16 +5,26 @@
 }
 
 .weather-icon {
-  font-size: 4rem;
+  width: 130px;
+  display: block;
   border-radius: 50%;
   border: 4px solid #a5d7e8;
-  width: fit-content;
-  padding: 10px 20px;
+  padding: 15px 20px;
   margin: 0 auto 1rem;
 }
 
+.day {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
 .item-temperature {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: #a5d7e8;
   text-shadow: 0 0 0.25rem rgba(101, 100, 124, 0.7);
+}
+
+.item-temperature .max {
+  color: #19376d;
 }

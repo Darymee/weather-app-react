@@ -19,17 +19,3 @@
   background-color: #0b2447;
   border-color: #0b2447;
 }
-
-.btn-current {
-  display: block;
-  background-color: #0b2447;
-  border-color: #0b2447;
-  margin-left: auto;
-}
-
-.btn-current:hover,
-.btn-current:active {
-  background-color: transparent;
-  border-color: #0b2447;
-  color: #212529;
-}

@@ -22,7 +22,7 @@ export default function SearchForm({ getCity, resetData }) {
   return (
     <form className="mb-4" onSubmit={handleSubmit}>
       <div className="row">
-        <div className="col">
+        <div className="col-9">
           <input
             type="text"
             className="form-control input"
@@ -32,21 +32,12 @@ export default function SearchForm({ getCity, resetData }) {
             value={city}
           />
         </div>
-        <div className="col">
+        <div className="col-3">
           <input
             type="submit"
             className="btn btn-outline-dark submit-btn"
             value="Search"
           />
-        </div>
-
-        <div className="col">
-          <button type="button" className="btn btn-dark btn-current">
-            Current{" "}
-            <span role="img" aria-label="location">
-              📍
-            </span>
-          </button>
         </div>
       </div>
     </form>
