@@ -2,10 +2,10 @@ import React from "react";
 
 import "./TodayInfo.css";
 
-export default function TodayInfo({ humidity, wind, pressure, icon_url }) {
+export default function TodayInfo({ humidity, wind, pressure, icon_url, alt }) {
   return (
     <div className="col">
-      <img src={icon_url} alt="weather icon" className="big-icon mb-4" />
+      <img src={icon_url} alt={alt} className="big-icon mb-4" />
 
       <div className="row">
         <div className="col p-0">

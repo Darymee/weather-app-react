@@ -74,6 +74,7 @@ export default function App() {
                 wind={weather.wind}
                 pressure={weather.pressure}
                 icon_url={weather.icon_url}
+                alt={weather.description}
               />
             </div>
             <Forecast />
